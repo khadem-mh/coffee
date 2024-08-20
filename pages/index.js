@@ -4,8 +4,14 @@ import TempMenu from "@/components/template/TempMenu/TempMenus";
 import TempTestimonial from "@/components/template/TempTestimonial/TempTestimonial";
 import TempReservation from "@/components/template/TempReservation/TempReservation";
 import Slider from "@/components/template/Slider/Slider";
+//
+import route from "@/data/routes";
 
-export default function Home() {
+export default function Home({ data }) {
+
+  console.log(data);
+
+
   return (
     <>
 
@@ -13,7 +19,7 @@ export default function Home() {
 
       <TempAbout />
 
-      <TempService />
+      <TempService services={data.services} />
 
       <div className="offer container-fluid my-5 py-5 text-center position-relative overlay-top overlay-bottom">
         <div className="container py-5">
@@ -38,5 +44,23 @@ export default function Home() {
       <TempTestimonial />
 
     </>
-  );
+  )
+}
+
+export async function getStaticProps() {
+
+  const res = await fetch(`${route}services`)
+  const services = await res.json()
+
+  if (!res.status === 200) return { notFound: true }
+
+  return {
+    props: {
+      data: {
+        services
+      }
+    },
+    revalidate: (60 * 60) * 12
+  }
+
 }

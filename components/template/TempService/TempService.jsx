@@ -1,12 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faTruck,
-    faCoffee,
-    faAward,
-    faTable
-} from "@fortawesome/free-solid-svg-icons";
+import ServiceCard from "@/components/modules/ServiceCard/ServiceCard"
+import datas from "@/data/db.json"
 
-const TempService = () => {
+const TempService = ({ services }) => {
 
     return (
         <div className="container-fluid pt-5">
@@ -16,54 +11,17 @@ const TempService = () => {
                     <h1 className="display-4">Fresh & Organic Beans</h1>
                 </div>
                 <div className="row">
-                    <div className="col-lg-6 mb-5">
-                        <div className="row align-items-center">
-                            <div className="col-sm-5">
-                                <img className="img-fluid mb-3 mb-sm-0" src="img/service-1.jpg" alt="" />
-                            </div>
-                            <div className="col-sm-7">
-                                <h4><FontAwesomeIcon icon={faTruck} className="service-icon" /> Fastest Door Delivery</h4>
-                                <p className="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                                    invidunt, dolore tempor diam ipsum takima erat tempor</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 mb-5">
-                        <div className="row align-items-center">
-                            <div className="col-sm-5">
-                                <img className="img-fluid mb-3 mb-sm-0" src="img/service-2.jpg" alt="" />
-                            </div>
-                            <div className="col-sm-7">
-                                <h4><FontAwesomeIcon icon={faCoffee} className="service-icon" />Fresh Coffee Beans</h4>
-                                <p className="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                                    invidunt, dolore tempor diam ipsum takima erat tempor</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 mb-5">
-                        <div className="row align-items-center">
-                            <div className="col-sm-5">
-                                <img className="img-fluid mb-3 mb-sm-0" src="img/service-3.jpg" alt="" />
-                            </div>
-                            <div className="col-sm-7">
-                                <h4><FontAwesomeIcon icon={faAward} className="service-icon" />Best Quality Coffee</h4>
-                                <p className="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                                    invidunt, dolore tempor diam ipsum takima erat tempor</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 mb-5">
-                        <div className="row align-items-center">
-                            <div className="col-sm-5">
-                                <img className="img-fluid mb-3 mb-sm-0" src="img/service-4.jpg" alt="" />
-                            </div>
-                            <div className="col-sm-7">
-                                <h4><FontAwesomeIcon icon={faTable} className="service-icon" />Online Table Booking</h4>
-                                <p className="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                                    invidunt, dolore tempor diam ipsum takima erat tempor</p>
-                            </div>
-                        </div>
-                    </div>
+                    {
+                        services.lenght
+                            ?
+                            services.map(item => (
+                                <ServiceCard key={item.index} {...item} />
+                            ))
+                            :
+                            datas.services.map(item => (
+                                <ServiceCard key={item.index} {...item} />
+                            ))
+                    }
                 </div>
             </div>
         </div>
