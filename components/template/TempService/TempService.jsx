@@ -12,14 +12,14 @@ const TempService = ({ services }) => {
                 </div>
                 <div className="row">
                     {
-                        services.lenght
+                        services !== undefined
                             ?
-                            services.map(item => (
-                                <ServiceCard key={item.index} {...item} />
+                            services.map((item, index) => (
+                                <ServiceCard key={index} {...item} />
                             ))
                             :
-                            datas.services.map(item => (
-                                <ServiceCard key={item.index} {...item} />
+                            datas.services.map((item, index) => (
+                                <ServiceCard key={index} {...item} />
                             ))
                     }
                 </div>
