@@ -49,10 +49,18 @@ export default function Home({ data }) {
 
 export async function getStaticProps() {
 
-  const res = await fetch(`${route}services`)
-  const services = await res.json()
+  let services = []
 
-  if (!res.status === 200) return { notFound: true }
+  try {
+    
+    const res = await fetch(`${route}services`)
+    services = await res.json()
+
+  } catch (err) {
+
+    console.warn("Backend Project Faild To Run")
+
+  }
 
   return {
     props: {
