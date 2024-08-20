@@ -1,8 +1,8 @@
-import About from "./about";
-import Service from "./service";
-import Menu from "./menu";
-import Testimonial from "./testimonial";
-import Reservation from "./reservation";
+import TempAbout from "@/components/template/TempAbout/TempAbout";
+import TempService from "@/components/template/TempService/TempService";
+import TempMenu from "@/components/template/TempMenu/TempMenus";
+import TempTestimonial from "@/components/template/TempTestimonial/TempTestimonial";
+import TempReservation from "@/components/template/TempReservation/TempReservation";
 import Slider from "@/components/template/Slider/Slider";
 
 export default function Home() {
@@ -11,9 +11,9 @@ export default function Home() {
 
       <Slider />
 
-      <About />
+      <TempAbout />
 
-      <Service />
+      <TempService />
 
       <div className="offer container-fluid my-5 py-5 text-center position-relative overlay-top overlay-bottom">
         <div className="container py-5">
@@ -31,11 +31,11 @@ export default function Home() {
         </div>
       </div>
 
-      <Menu />
+      <TempMenu />
 
-      <Reservation />
+      <TempReservation />
 
-      <Testimonial />
+      <TempTestimonial />
 
     </>
   );
