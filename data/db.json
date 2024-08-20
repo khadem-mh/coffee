@@ -1,122 +1,126 @@
 {
-    "menu": [
-        {
-            "id": 1,
-            "title": "Black Coffee",
-            "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-            "img": "img/menu-1.jpg",
-            "price": 5,
-            "off": 0
-        },
-        {
-            "id": 2,
-            "title": "Chocolete Coffee",
-            "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-            "img": "img/menu-2.jpg",
-            "price": 9,
-            "off": 20
-        },
-        {
-            "id": 3,
-            "title": "Coffee With Milk",
-            "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-            "img": "img/menu-3.jpg",
-            "price": 15,
-            "off": 25
-        },
-        {
-            "id": 4,
-            "title": "Dark Coffee",
-            "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-            "img": "img/menu-4.jpg",
-            "price": 55,
-            "off": 30
-        },
-        {
-            "id": 5,
-            "title": "Coffee With Wather",
-            "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-            "img": "img/menu-5.jpg",
-            "price": 25,
-            "off": 0
-        },
-        {
-            "id": 6,
-            "title": "Black Coffee",
-            "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-            "img": "img/menu-6.jpg",
-            "price": 35,
-            "off": 0
-        }
-    ],
-    "services": [
-        {
-            "id": 1,
-            "title": "Fastest Door Delivery",
-            "desc": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
-            "img": "img/service-1.jpg",
-            "icon": "faTruck"
-        },
-        {
-            "id": 2,
-            "title": "Fresh Coffee Beans",
-            "desc": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
-            "img": "img/service-2.jpg",
-            "icon": "faCoffee"
-        },
-        {
-            "id": 3,
-            "title": "Best Quality Coffee",
-            "desc": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
-            "img": "img/service-3.jpg",
-            "icon": "faAward"
-        },
-        {
-            "id": 4,
-            "title": "Online Table Booking",
-            "desc": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
-            "img": "img/service-4.jpg",
-            "icon": "faTable"
-        }
-    ],
-    "newsLetters": [
-        {
-            "id": 1,
-            "email": "khadem13359@gmail.com"
-        },
-        {
-            "id": 2,
-            "email": "qadir@gmail.com"
-        }
-    ],
-    "comments": [
-        {
-            "id": 1,
-            "username": "qadir yolme",
-            "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
-            "score": 5,
-            "productID": 1
-        },
-        {
-            "id": 2,
-            "username": "abolfazle asadi",
-            "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
-            "score": 2,
-            "productID": 1
-        },
-        {
-            "id": 3,
-            "username": "yasin jalaly",
-            "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
-            "score": 4,
-            "productID": 2
-        },
-        {
-            "id": 4,
-            "username": "mark zakerberg",
-            "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
-            "score": 3,
-            "productID": 4
-        }
-    ]
+  "menu": [
+    {
+      "id": "1",
+      "title": "Black Coffee",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "img": "img/menu-1.jpg",
+      "price": 5,
+      "off": 0
+    },
+    {
+      "id": "2",
+      "title": "Chocolete Coffee",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "img": "img/menu-2.jpg",
+      "price": 9,
+      "off": 20
+    },
+    {
+      "id": "3",
+      "title": "Coffee With Milk",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "img": "img/menu-3.jpg",
+      "price": 15,
+      "off": 25
+    },
+    {
+      "id": "4",
+      "title": "Dark Coffee",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "img": "img/menu-4.jpg",
+      "price": 55,
+      "off": 30
+    },
+    {
+      "id": "5",
+      "title": "Coffee With Wather",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "img": "img/menu-5.jpg",
+      "price": 25,
+      "off": 0
+    },
+    {
+      "id": "6",
+      "title": "Black Coffee",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "img": "img/menu-6.jpg",
+      "price": 35,
+      "off": 0
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "Fastest Door Delivery",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
+      "img": "img/service-1.jpg",
+      "icon": "faTruck"
+    },
+    {
+      "id": "2",
+      "title": "Fresh Coffee Beans",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
+      "img": "img/service-2.jpg",
+      "icon": "faCoffee"
+    },
+    {
+      "id": "3",
+      "title": "Best Quality Coffee",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
+      "img": "img/service-3.jpg",
+      "icon": "faAward"
+    },
+    {
+      "id": "4",
+      "title": "Online Table Booking",
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit invidunt, dolore tempor diam ipsum takima erat tempor",
+      "img": "img/service-4.jpg",
+      "icon": "faTable"
+    }
+  ],
+  "newsLetters": [
+    {
+      "id": "1",
+      "email": "khadem13359@gmail.com"
+    },
+    {
+      "id": "2",
+      "email": "qadir@gmail.com"
+    },
+    {
+      "id": "7ef2",
+      "email": "khadem13359@gmail.com"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "username": "qadir yolme",
+      "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
+      "score": 5,
+      "productID": 1
+    },
+    {
+      "id": "2",
+      "username": "abolfazle asadi",
+      "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
+      "score": 2,
+      "productID": 1
+    },
+    {
+      "id": "3",
+      "username": "yasin jalaly",
+      "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
+      "score": 4,
+      "productID": 2
+    },
+    {
+      "id": "4",
+      "username": "mark zakerberg",
+      "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
+      "score": 3,
+      "productID": 4
+    }
+  ]
 }
