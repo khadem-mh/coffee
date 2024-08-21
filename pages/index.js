@@ -24,7 +24,7 @@ export default function Home({ data }) {
 
       <TempReservation />
 
-      <TempTestimonial />
+      <TempTestimonial comments={data.comments}/>
     </>
   )
 }
@@ -33,6 +33,7 @@ export async function getStaticProps() {
 
   let services = []
   let menus = []
+  let comments = []
 
   try {
 
@@ -41,6 +42,9 @@ export async function getStaticProps() {
 
     const resMenus = await fetch(`${route}menus`)
     menus = await resMenus.json()
+
+    const resComments = await fetch(`${route}comments`)
+    comments = await resComments.json()
 
   } catch (err) {
 
@@ -52,7 +56,8 @@ export async function getStaticProps() {
     props: {
       data: {
         services,
-        menus
+        menus,
+        comments
       }
     },
     revalidate: (60 * 60) * 12
