@@ -1,15 +1,16 @@
 import { useState } from "react"
 import route from "@/data/routes"
+import { emailIsValid } from "@/validation/regex"
 
 const Offer = () => {
 
     const [email, setEmail] = useState("")
-    const emailIsValid = new RegExp('^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$')
+
 
     const handleJoinUserToNewsLetter = async event => {
         event.preventDefault()
 
-        if (emailIsValid.test(email)) {
+        if (emailIsValid(email)) {
 
             try {
 
