@@ -9,6 +9,7 @@ import Offer from "@/components/template/Offer/Offer";
 import route from "@/data/routes";
 
 export default function Home({ data }) {
+
   return (
     <>
       <Slider />
@@ -19,7 +20,7 @@ export default function Home({ data }) {
 
       <Offer />
 
-      <TempMenu />
+      <TempMenu menus={data.menus}/>
 
       <TempReservation />
 
@@ -31,11 +32,15 @@ export default function Home({ data }) {
 export async function getStaticProps() {
 
   let services = []
+  let menus = []
 
   try {
 
-    const res = await fetch(`${route}services`)
-    services = await res.json()
+    const resServices = await fetch(`${route}services`)
+    services = await resServices.json()
+
+    const resMenus = await fetch(`${route}menus`)
+    menus = await resMenus.json()
 
   } catch (err) {
 
@@ -46,7 +51,8 @@ export async function getStaticProps() {
   return {
     props: {
       data: {
-        services
+        services,
+        menus
       }
     },
     revalidate: (60 * 60) * 12

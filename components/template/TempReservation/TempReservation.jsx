@@ -1,9 +1,24 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
     faCheck
-} from "@fortawesome/free-solid-svg-icons";
+} from "@fortawesome/free-solid-svg-icons"
+// assets
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 
 const TempReservation = () => {
+
+    const [selectedDate, setSelectedDate] = useState(null)
+    const [clock, setClock] = useState("08:00")
+
+    // Asset
+    const today = new Date()
+    const tomorrow = new Date(today)
+    tomorrow.setDate(tomorrow.getDate() + 1)
+    const clocks = ["08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"]
+
+    const reserveBookHandler = () => { }
 
     return (
         <div className="container-fluid my-5">
@@ -30,7 +45,7 @@ const TempReservation = () => {
                                 <h1 className="text-white mb-4 mt-5">Book Your Table</h1>
                                 <form className="mb-5">
                                     <div className="form-group">
-                                        <input type="text" className="form-control bg-transparent border-primary p-4" placeholder="Name"
+                                        <input type="text" className="form-control bg-transparent border-primary p-4" placeholder="Full Name"
                                             required="required" />
                                     </div>
                                     <div className="form-group">
@@ -38,14 +53,39 @@ const TempReservation = () => {
                                             required="required" />
                                     </div>
                                     <div className="form-group">
-                                        <div className="date" id="date" data-target-input="nearest">
-                                            <input type="text" className="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker" />
-                                        </div>
+
+                                        <DatePicker
+                                            selected={selectedDate}
+                                            onChange={(date) => setSelectedDate(date)}
+                                            dateFormat="yyyy/MM/dd"
+                                            placeholderText="Choose Date"
+                                            minDate={tomorrow}
+                                            className="form-control bg-transparent border-primary p-4 datetimepicker-input"
+                                        />
+
                                     </div>
-                                    <div className="form-group">
-                                        <div className="time" id="time" data-target-input="nearest">
-                                            <input type="text" className="form-control bg-transparent border-primary p-4 datetimepicker-input" placeholder="Time" data-target="#time" data-toggle="datetimepicker" />
-                                        </div>
+                                    <div className="form-group d-flex border-primary">
+
+                                        <select>
+                                            {
+                                                clocks.map(item => (
+                                                    <option value={item}>{item}</option>
+                                                ))
+                                            }
+                                        </select>
+
+                                        <select>
+                                            <option value="15">00</option>
+                                            <option value="15">15</option>
+                                            <option value="30">30</option>
+                                            <option value="45">45</option>
+                                        </select>
+
+                                        <select>
+                                            <option value="AM">AM</option>
+                                            <option value="PM">PM</option>
+                                        </select>
+
                                     </div>
                                     <div className="form-group">
                                         <select className="custom-select bg-transparent border-primary px-4" style={{ height: "49px" }}>
@@ -53,12 +93,12 @@ const TempReservation = () => {
                                             <option value="1">Person 1</option>
                                             <option value="2">Person 2</option>
                                             <option value="3">Person 3</option>
-                                            <option value="3">Person 4</option>
+                                            <option value="4">Person 4</option>
                                         </select>
                                     </div>
 
                                     <div>
-                                        <button className="btn btn-primary btn-block font-weight-bold py-3" type="submit">Book Now</button>
+                                        <button className="btn btn-primary btn-block font-weight-bold py-3" onClick={reserveBookHandler}>Book Now</button>
                                     </div>
                                 </form>
                             </div>

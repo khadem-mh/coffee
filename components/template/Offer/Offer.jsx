@@ -32,7 +32,6 @@ const Offer = () => {
         else alert("Email is not valid")
     }
 
-
     return (
         <div className="offer container-fluid my-5 py-5 text-center position-relative overlay-top overlay-bottom">
             <div className="container py-5">

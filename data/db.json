@@ -1,12 +1,13 @@
 {
-  "menu": [
+  "menus": [
     {
       "id": "1",
       "title": "Black Coffee",
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "img": "img/menu-1.jpg",
       "price": 5,
-      "off": 0
+      "off": 0,
+      "type": "hot"
     },
     {
       "id": "2",
@@ -14,7 +15,8 @@
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "img": "img/menu-2.jpg",
       "price": 9,
-      "off": 20
+      "off": 20,
+      "type": "hot"
     },
     {
       "id": "3",
@@ -22,31 +24,35 @@
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "img": "img/menu-3.jpg",
       "price": 15,
-      "off": 25
+      "off": 25,
+      "type": "cold"
     },
     {
       "id": "4",
       "title": "Dark Coffee",
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "img": "img/menu-4.jpg",
+      "img": "img/menu-3.jpg",
       "price": 55,
-      "off": 30
+      "off": 30,
+      "type": "hot"
     },
     {
       "id": "5",
       "title": "Coffee With Wather",
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "img": "img/menu-5.jpg",
+      "img": "img/menu-2.jpg",
       "price": 25,
-      "off": 0
+      "off": 0,
+      "type": "cold"
     },
     {
       "id": "6",
-      "title": "Black Coffee",
+      "title": "Smooth Coffee",
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "img": "img/menu-6.jpg",
+      "img": "img/menu-1.jpg",
       "price": 35,
-      "off": 0
+      "off": 0,
+      "type": "cold"
     }
   ],
   "services": [
@@ -121,6 +127,16 @@
       "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
       "score": 3,
       "productID": 4
+    }
+  ],
+  "reserve": [
+    {
+      "id": "1",
+      "fullName": "stive jabz",
+      "email": "stive@gmail.ios",
+      "date": "16/20/2024",
+      "time": "02:15",
+      "countPerson": "4"
     }
   ]
 }
