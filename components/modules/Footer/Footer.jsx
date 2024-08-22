@@ -5,8 +5,40 @@ import {
     faPhoneAlt,
     faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import route from "@/data/routes";
+import { useState } from "react";
+import { emailIsValid } from "@/validation/regex";
 
 const Footer = () => {
+
+    const [email, setEmail] = useState("")
+
+    const handleJoinUserToNewsLetter = async event => {
+        event.preventDefault()
+
+        if (emailIsValid(email)) {
+
+            try {
+
+                const res = await fetch(`${route}newsLetters`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email })
+                })
+
+                res.status = 201 ? alert("SUCCESS") : alert("Faild To Execute")
+                setEmail("")
+
+            } catch (err) {
+                //
+            }
+
+        }
+        else alert("Email is not valid")
+    }
+
     return (
         <div className="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
 
@@ -54,9 +86,9 @@ const Footer = () => {
                     <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
                     <div className="w-100">
                         <div className="input-group">
-                            <input type="text" className="form-control border-light" style={{ padding: "25px" }} placeholder="Your Email" />
+                            <input value={email} onChange={e => setEmail(e.target.value)} type="text" className="form-control border-light" style={{ padding: "25px" }} placeholder="Your Email" />
                             <div className="input-group-append">
-                                <button className="btn btn-primary font-weight-bold px-3">Sign Up</button>
+                                <button className="btn btn-primary font-weight-bold px-3" onClick={e => handleJoinUserToNewsLetter(e)}>JOIN</button>
                             </div>
                         </div>
                     </div>
@@ -66,7 +98,7 @@ const Footer = () => {
             <div className="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style={{ borderColor: 'rgba(256, 256, 256, .1) !important' }}>
                 <p className="mb-2 text-white">Copyright &copy; <Link className="font-weight-bold" href="#">Domain</Link>. All Rights Reserved.</p>
                 <p className="m-0 text-white">Made with ❤️ by <Link className="font-weight-bold" href="https://github.com/khadem-mh" target="_blank"> mh khadem</Link></p>
-            </div >
+            </div>
 
         </div >
     )

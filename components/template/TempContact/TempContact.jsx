@@ -16,30 +16,35 @@ const TempContact = () => {
 
         if (name.length && subject.length && message.length && emailIsValid(email)) {
 
-            const res = await fetch(`${route}contact`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    name,
-                    email,
-                    subject,
-                    message,
+            try {
+
+                const res = await fetch(`${route}contact`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        subject,
+                        message,
+                    })
                 })
-            })
 
-            if (res.ok) {
+                if (res.ok) {
 
-                alert('SUCCESS')
-                setName("")
-                setEmail("")
-                setSubject("")
-                setMessage("")
+                    alert('SUCCESS')
+                    setName("")
+                    setEmail("")
+                    setSubject("")
+                    setMessage("")
 
-            } else alert('ERROR')
+                } else alert('ERROR')
 
-
+            } catch (err) {
+                //codes
+            }
+       
         } else {
             alert('please enter format correct')
         }
