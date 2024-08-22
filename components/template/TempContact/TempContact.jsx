@@ -1,9 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faMapMarkerAlt,
-    faPhoneAlt,
-    faEnvelope
-} from "@fortawesome/free-solid-svg-icons";
+import ExampleInfo from "@/components/modules/ExampleInfo/ExampleInfo"
 
 const TempContact = () => {
 
@@ -11,25 +6,29 @@ const TempContact = () => {
         <div className="container-fluid pt-5">
             <div className="container">
                 <div className="section-title">
-                    <h4 className="text-primary text-uppercase" style={{letterSpacing: "5px"}}>Contact Us</h4>
+                    <h4 className="text-primary text-uppercase" style={{ letterSpacing: "5px" }}>Contact Us</h4>
                     <h1 className="display-4">Feel Free To Contact</h1>
                 </div>
                 <div className="row px-3 pb-2">
-                    <div className="col-sm-4 text-center mb-3">
-                        <FontAwesomeIcon icon={faMapMarkerAlt} className="fa-2x  mb-3 text-primary" />
-                        <h4 className="font-weight-bold">Address</h4>
-                        <p>123 Street, New York, USA</p>
-                    </div>
-                    <div className="col-sm-4 text-center mb-3">
-                        <FontAwesomeIcon icon={faPhoneAlt} className="fa-2x mb-3 text-primary" />
-                        <h4 className="font-weight-bold">Phone</h4>
-                        <p>+012 345 6789</p>
-                    </div>
-                    <div className="col-sm-4 text-center mb-3">
-                        <FontAwesomeIcon icon={faEnvelope} className="fa-2x mb-3 text-primary" />
-                        <h4 className="font-weight-bold">Email</h4>
-                        <p>info@example.com</p>
-                    </div>
+
+                    <ExampleInfo
+                        desc={'info@gmail.com'}
+                        title={'Email'}
+                        icon={'faEnvelope'}
+                    />
+
+                    <ExampleInfo
+                        desc={'123 Street, New York, USA'}
+                        title={'Address'}
+                        icon={'faMapMarkerAlt'}
+                    />
+
+                    <ExampleInfo
+                        desc={'+012 345 6789'}
+                        title={'Phone'}
+                        icon={'faPhoneAlt'}
+                    />
+
                 </div>
                 <div className="row">
                     <div className="col-md-6 pb-5">
