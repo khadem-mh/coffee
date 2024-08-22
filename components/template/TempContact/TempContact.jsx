@@ -1,6 +1,49 @@
 import ExampleInfo from "@/components/modules/ExampleInfo/ExampleInfo"
+import { useState } from "react"
+import { emailIsValid } from "@/validation/regex"
+import route from "@/data/routes"
 
 const TempContact = () => {
+
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [subject, setSubject] = useState("")
+    const [message, setMessage] = useState("")
+
+    const setNewInfoToContactsHandler = async event => {
+
+        event.preventDefault()
+
+        if (name.length && subject.length && message.length && emailIsValid(email)) {
+
+            const res = await fetch(`${route}contact`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    subject,
+                    message,
+                })
+            })
+
+            if (res.ok) {
+
+                alert('SUCCESS')
+                setName("")
+                setEmail("")
+                setSubject("")
+                setMessage("")
+
+            } else alert('ERROR')
+
+
+        } else {
+            alert('please enter format correct')
+        }
+    }
 
     return (
         <div className="container-fluid pt-5">
@@ -40,31 +83,37 @@ const TempContact = () => {
                         <div className="contact-form">
                             <div id="success"></div>
                             <form name="sentMessage" id="contactForm" novalidate="novalidate">
+
                                 <div className="control-group">
-                                    <input type="text" className="form-control bg-transparent p-4" id="name" placeholder="Your Name"
+                                    <input value={name} onChange={e => setName(e.target.value)} type="text" className="form-control bg-transparent p-4" id="name" placeholder="Your Name"
                                         required="required" data-validation-required-message="Please enter your name" />
                                     <p className="help-block text-danger"></p>
                                 </div>
+
                                 <div className="control-group">
-                                    <input type="email" className="form-control bg-transparent p-4" id="email" placeholder="Your Email"
+                                    <input value={email} onChange={e => setEmail(e.target.value)} type="email" className="form-control bg-transparent p-4" id="email" placeholder="Your Email"
                                         required="required" data-validation-required-message="Please enter your email" />
                                     <p className="help-block text-danger"></p>
                                 </div>
+
                                 <div className="control-group">
-                                    <input type="text" className="form-control bg-transparent p-4" id="subject" placeholder="Subject"
+                                    <input value={subject} onChange={e => setSubject(e.target.value)} type="text" className="form-control bg-transparent p-4" id="subject" placeholder="Subject"
                                         required="required" data-validation-required-message="Please enter a subject" />
                                     <p className="help-block text-danger"></p>
                                 </div>
+
                                 <div className="control-group">
-                                    <textarea className="form-control bg-transparent py-3 px-4" rows="5" id="message" placeholder="Message"
+                                    <textarea value={message} onChange={e => setMessage(e.target.value)} className="form-control bg-transparent py-3 px-4" rows="5" id="message" placeholder="Message"
                                         required="required"
                                         data-validation-required-message="Please enter your message"></textarea>
                                     <p className="help-block text-danger"></p>
                                 </div>
+
                                 <div>
-                                    <button className="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="sendMessageButton">Send
+                                    <button onClick={e => setNewInfoToContactsHandler(e)} className="btn btn-primary font-weight-bold py-3 px-5" id="sendMessageButton">Send
                                         Message</button>
                                 </div>
+
                             </form>
                         </div>
                     </div>
