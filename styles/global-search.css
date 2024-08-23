@@ -1,0 +1,25 @@
+.global-search__parent {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding-bottom: .3rem;
+}
+
+.global-search__input {
+    all: unset;
+    color: white;
+}
+
+.global-search__input::placeholder {
+    color: white;
+}
+
+.global-search__icon {
+    cursor: pointer;
+    color: white;   
+    transition: all 300ms;
+}
+
+.global-search__icon:hover {
+    color: gray;
+}
