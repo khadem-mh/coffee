@@ -1,6 +1,6 @@
 import Link from "next/link"
 import GlobalSearch from "../GlobalSearch/GlobalSearch"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 
 const Navbar = () => {
@@ -8,15 +8,19 @@ const Navbar = () => {
     const router = useRouter()
     const [search, setSerch] = useState("")
 
+    useEffect(() => {
+        if (router.query?.q) setSerch(router.query.q)
+    }, [])
+
     const clickHandlerSearch = () => router.push(`/search?q=${search.trim()}`)
-    
+
     return (
         <div className="container-fluid p-0 nav-bar">
             <nav className="navbar navbar-expand-lg bg-none navbar-dark py-3">
                 <a href="index.html" className="navbar-brand px-lg-4 m-0">
                     <h1 className="m-0 display-4 text-uppercase text-white">Next-Coffee</h1>
                 </a>
-                <GlobalSearch value={search} setValue={setSerch} onClickSearch={clickHandlerSearch}/>
+                <GlobalSearch value={search} setValue={setSerch} onClickSearch={clickHandlerSearch} />
                 <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span className="navbar-toggler-icon"></span>
                 </button>

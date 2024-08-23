@@ -5,7 +5,7 @@ const TempMenu = ({ menus }) => {
 
     let hotCoffee = []
     let coldCoffee = []
-    
+
     const filterMenus = (menu, type) => menu.filter(item => item.type === type)
 
     if (menus && menus.length) {
@@ -28,9 +28,12 @@ const TempMenu = ({ menus }) => {
                         <h1 className="mb-5">Hot Coffee</h1>
 
                         {
-                            hotCoffee.slice(0, 3).map(item => (
-                                <DrinkCard key={item.index} {...item} />
-                            ))
+                            hotCoffee && hotCoffee.length ?
+                                hotCoffee.slice(0, 3).map(item => (
+                                    <DrinkCard key={item.index} {...item} />
+                                ))
+                                :
+                                <p style={{ fontSize: '2rem', }}>φ Not Found</p>
                         }
 
                     </div>
@@ -38,9 +41,12 @@ const TempMenu = ({ menus }) => {
                         <h1 className="mb-5">Cold Coffee</h1>
 
                         {
-                            coldCoffee.slice(0, 3).map(item => (
-                                <DrinkCard key={item.index} {...item} />
-                            ))
+                            coldCoffee && coldCoffee.length ?
+                                coldCoffee.slice(0, 3).map(item => (
+                                    <DrinkCard key={item.index} {...item} />
+                                ))
+                                :
+                                <p style={{ fontSize: '2rem', }}> φ Not Found</p>
                         }
 
                     </div>
