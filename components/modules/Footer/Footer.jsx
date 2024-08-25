@@ -97,7 +97,11 @@ const Footer = () => {
 
             <div className="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style={{ borderColor: 'rgba(256, 256, 256, .1) !important' }}>
                 <p className="mb-2 text-white">Copyright &copy; <Link className="font-weight-bold" href="#">Domain</Link>. All Rights Reserved.</p>
-                <p className="m-0 text-white">Made with ❤️ by <Link className="font-weight-bold" href="https://github.com/khadem-mh" target="_blank"> mh khadem</Link></p>
+                <p className="m-0 text-white">Made with ❤️ by 
+                    <Link className="font-weight-bold" href="https://github.com/khadem-mh" target="_blank">
+                        <img src="/img/khadem.jpg" alt="my" style={{width: '55px', borderRadius: '50rem', marginLeft: '.8rem'}} />
+                    </Link>
+                </p>
             </div>
 
         </div >

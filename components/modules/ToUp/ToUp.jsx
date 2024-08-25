@@ -7,7 +7,7 @@ import {
 const ToUp = () => {
 
     return (
-        <Link href="#" className="btn btn-primary" style={{ position: 'fixed', bottom: '30px', left: '30px' }}>
+        <Link href="#" className="btn btn-primary" style={{ position: 'fixed', bottom: '30px', left: '30px', zIndex: '100' }}>
             <FontAwesomeIcon icon={faAngleDoubleUp} className="fa fa-2x" style={{ color: 'white' }} />
         </Link>
     )
