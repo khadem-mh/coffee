@@ -4,16 +4,16 @@
       "id": "1",
       "title": "Black Coffee",
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "img": "img/menu-1.jpg",
+      "img": "/img/menu-1.jpg",
       "price": 5,
-      "off": 0,
+      "off": 25,
       "type": "hot"
     },
     {
       "id": "2",
       "title": "Chocolete Coffee",
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "img": "img/menu-2.jpg",
+      "img": "/img/menu-2.jpg",
       "price": 9,
       "off": 20,
       "type": "hot"
@@ -22,7 +22,7 @@
       "id": "3",
       "title": "Coffee With Milk",
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "img": "img/menu-3.jpg",
+      "img": "/img/menu-3.jpg",
       "price": 15,
       "off": 25,
       "type": "cold"
@@ -31,7 +31,7 @@
       "id": "4",
       "title": "Dark Coffee",
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "img": "img/menu-3.jpg",
+      "img": "/img/menu-3.jpg",
       "price": 55,
       "off": 30,
       "type": "hot"
@@ -40,7 +40,7 @@
       "id": "5",
       "title": "Coffee With Wather",
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "img": "img/menu-2.jpg",
+      "img": "/img/menu-2.jpg",
       "price": 25,
       "off": 0,
       "type": "cold"
@@ -49,7 +49,7 @@
       "id": "6",
       "title": "Smooth Coffee",
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "img": "img/menu-1.jpg",
+      "img": "/img/menu-1.jpg",
       "price": 35,
       "off": 0,
       "type": "cold"

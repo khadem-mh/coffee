@@ -55,19 +55,19 @@ const Footer = () => {
                     <div className="d-flex justify-content-start">
 
                         <Link href="https://github.com/khadem-mh" className="mr-3">
-                            <img src="img/social-media/github.png" alt="social" />
+                            <img src="/img/social-media/github.png" alt="social" />
                         </Link>
 
                         <Link href="https://www.linkedin.com/in/khadem-mh/" className="mr-3">
-                            <img src="img/social-media/linkedin.png" alt="social" />
+                            <img src="/img/social-media/linkedin.png" alt="social" />
                         </Link>
 
                         <Link href="https://t.me/mhkhadem" className="mr-3">
-                            <img src="img/social-media/telegram.png" alt="social" />
+                            <img src="/img/social-media/telegram.png" alt="social" />
                         </Link>
 
                         <Link href="https://wa.me/989031335939">
-                            <img src="img/social-media/whatsapp.png" alt="social" />
+                            <img src="/img/social-media/whatsapp.png" alt="social" />
                         </Link>
 
                     </div>

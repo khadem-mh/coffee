@@ -1,2 +1,17 @@
 @import "./global-search.css";
 @import "./style.min.css";
+
+.testy_ {
+    position: relative;
+}
+
+.testy_::after {
+    content: "";
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    bottom: -1px;
+    background: url("../public/img/overlay-bottom.png");
+    background-color: transparent;
+    z-index: 1;
+}

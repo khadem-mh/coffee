@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
       <Navbar />
 
       {
-        router.pathname !== '/' && <PageHeader routeName={routeName} routePathName={router.pathname.slice(1)} />
+        router.pathname !== '/' || router.pathname.includes('/products') && <PageHeader routeName={routeName} routePathName={router.pathname.slice(1)} />
       }
 
       <Component {...pageProps} />
