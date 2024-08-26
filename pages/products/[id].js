@@ -1,9 +1,12 @@
 import route from "@/data/routes"
 import datas from '@/data/db.json'
+import TempTestimonial from "@/components/template/TempTestimonial/TempTestimonial"
 
-export default function ProductInfo({ product }) {
+export default function ProductInfo({ product, commentsID }) {
 
     const { img, price, title, desc, off, type } = product
+    console.log(commentsID);
+
 
     return (
         <>
@@ -34,6 +37,10 @@ export default function ProductInfo({ product }) {
                 </div>
             </div>
 
+            {
+                commentsID &&
+                <TempTestimonial comments={[commentsID]} />
+            }
 
 
         </>
@@ -42,12 +49,23 @@ export default function ProductInfo({ product }) {
 
 export async function getStaticPaths() {
 
-    const res = await fetch(`${route}menus`);
-    const data = await res.json();
+    let products = null
 
-    const products = data.slice(0, 3).map(item => {
+    try {
+
+        const res = await fetch(`${route}menus`);
+        const data = await res.json();
+        products = data.slice(0, 3).map(item => {
+            return { params: { id: String(item.id) } }
+        })
+
+    } catch (err) {
+        // codes
+    }
+
+    products === null && (products = datas.menus.slice(0, 3).map(item => {
         return { params: { id: String(item.id) } }
-    })
+    }))
 
     return {
         paths: products,
@@ -60,27 +78,36 @@ export async function getStaticProps(context) {
 
     const productID = context.params.id
     let product = null
+    let commentsID = null
 
     try {
 
-        const res = await fetch(`${route}menus`)
-        const data = await res.json()
-        product = data.find(item => item.id === productID)
+        const resMenus = await fetch(`${route}menus`)
+        const menu = await resMenus.json()
+        product = menu.find(item => item.id === productID)
+
+        const resComments = await fetch(`${route}comments`)
+        const comments = await resComments.json()
+        commentsID = comments.find(item => item.productID === +productID)
 
     } catch (err) {
         //codes
     }
 
-    if (product === null) product = datas.find(item => item.id === productID)
-    else if (!product) {
+    if (product === null) product = datas.menus.find(item => item.id === productID)
+    if (commentsID === null) commentsID = datas.comments.find(item => item.productID === +productID)
+    if (!product) {
         return {
             notFound: true,
         }
     }
 
+    commentsID === undefined && (commentsID = null)
+    
     return {
         props: {
             product,
+            commentsID
         },
         revalidate: 24 * 60 * 60, // 86400 seconds
     }

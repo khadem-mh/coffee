@@ -14,12 +14,12 @@ const TempTestimonial = ({ comments }) => {
                     {
                         comments.length
                             ?
-                            comments.map(item => (
-                                <CommentUser key={item.index} {...item} />
+                            comments.map((item, index) => (
+                                <CommentUser key={index} {...item} />
                             ))
                             :
-                            datas.comments.map(item => (
-                                <CommentUser key={item.index} {...item} />
+                            datas.comments.map((item, index) => (
+                                <CommentUser key={index} {...item} />
                             ))
                     }
 

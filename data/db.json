@@ -109,15 +109,15 @@
       "username": "qadir yolme",
       "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
       "score": 5,
-      "img": "img/testimonial-2.jpg",
-      "productID": 1
+      "img": "/img/testimonial-2.jpg",
+      "productID": 5
     },
     {
       "id": "2",
       "username": "sanas asadi",
       "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
       "score": 2,
-      "img": "img/testimonial-3.jpg",
+      "img": "/img/testimonial-3.jpg",
       "productID": 1
     },
     {
@@ -125,7 +125,7 @@
       "username": "yasin jalaly",
       "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
       "score": 4,
-      "img": "img/testimonial-4.jpg",
+      "img": "/img/testimonial-4.jpg",
       "productID": 2
     },
     {
@@ -133,7 +133,7 @@
       "username": "elizabet",
       "body": "Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita",
       "score": 3,
-      "img": "img/testimonial-1.jpg",
+      "img": "/img/testimonial-1.jpg",
       "productID": 4
     }
   ],

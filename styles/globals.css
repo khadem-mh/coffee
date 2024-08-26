@@ -1,6 +1,10 @@
 @import "./global-search.css";
 @import "./style.min.css";
 
+body {
+    overflow-x: hidden;
+}
+
 .testy_ {
     position: relative;
 }
