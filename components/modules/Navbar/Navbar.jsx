@@ -1,4 +1,4 @@
-import Link from "next/link"
+import NavLink from "next/link"
 import GlobalSearch from "../GlobalSearch/GlobalSearch"
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
@@ -26,18 +26,18 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div className="navbar-nav ml-auto p-4">
-                        <Link href="/" className="nav-item nav-link">Home</Link>
-                        <Link href="about" className="nav-item nav-link active">About</Link>
-                        <Link href="service" className="nav-item nav-link">Service</Link>
-                        <Link href="menu" className="nav-item nav-link">Menu</Link>
+                        <NavLink href="/" className="nav-item nav-link">Home</NavLink>
+                        <NavLink href="/about" className="nav-item nav-link">About</NavLink>
+                        <NavLink href="/service" className="nav-item nav-link">Service</NavLink>
+                        <NavLink href="/menu" className="nav-item nav-link">Menu</NavLink>
                         <div className="nav-item dropdown">
-                            <Link href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Pages</Link>
+                            <NavLink href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Pages</NavLink>
                             <div className="dropdown-menu text-capitalize">
-                                <a href="reservation" className="dropdown-item">Reservation</a>
-                                <a href="testimonial" className="dropdown-item">Testimonial</a>
+                                <NavLink href="/reservation" className="dropdown-item">Reservation</NavLink>
+                                <NavLink href="/testimonial" className="dropdown-item">Testimonial</NavLink>
                             </div>
                         </div>
-                        <Link href="contact" className="nav-item nav-link">Contact</Link>
+                        <NavLink href="contact" className="nav-item nav-link">Contact</NavLink>
                     </div>
                 </div>
             </nav>
