@@ -123,28 +123,28 @@ const TempReservation = () => {
 
                                         <select onChange={e => setHours(e.target.value)}>
                                             {
-                                                clocks.map(item => (
-                                                    <option value={item} selected={item === "08" && true}>{item}</option>
+                                                clocks.map((item, index) => (
+                                                    <option key={index} value={item} defaultValue={item === "08" && true}>{item}</option>
                                                 ))
                                             }
                                         </select>
 
                                         <select onChange={e => setMinute(e.target.value)}>
-                                            <option value="00" selected>00</option>
+                                            <option value="00" >00</option>
                                             <option value="15">15</option>
                                             <option value="30">30</option>
                                             <option value="45">45</option>
                                         </select>
 
                                         <select onChange={e => setTime(e.target.value)}>
-                                            <option value="AM" selected>AM</option>
+                                            <option value="AM">AM</option>
                                             <option value="PM">PM</option>
                                         </select>
 
                                     </div>
                                     <div className="form-group">
                                         <select onChange={e => setCountPerson(e.target.value)} className="custom-select bg-transparent border-primary px-4" style={{ height: "49px" }}>
-                                            <option selected>Person</option>
+                                            <option>Person</option>
                                             <option value="1">Person 1</option>
                                             <option value="2">Person 2</option>
                                             <option value="3">Person 3</option>

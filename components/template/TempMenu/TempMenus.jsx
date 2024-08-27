@@ -30,7 +30,7 @@ const TempMenu = ({ menus }) => {
                         {
                             hotCoffee && hotCoffee.length ?
                                 hotCoffee.slice(0, 3).map(item => (
-                                    <DrinkCard key={item.index} {...item} />
+                                    <DrinkCard key={item.id} {...item} />
                                 ))
                                 :
                                 <p style={{ fontSize: '2rem', }}>φ Not Found</p>
@@ -43,7 +43,7 @@ const TempMenu = ({ menus }) => {
                         {
                             coldCoffee && coldCoffee.length ?
                                 coldCoffee.slice(0, 3).map(item => (
-                                    <DrinkCard key={item.index} {...item} />
+                                    <DrinkCard key={item.id} {...item} />
                                 ))
                                 :
                                 <p style={{ fontSize: '2rem', }}> φ Not Found</p>

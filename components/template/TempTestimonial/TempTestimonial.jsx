@@ -12,14 +12,14 @@ const TempTestimonial = ({ comments }) => {
                 <div className="owl-carousel testimonial-carousel">
 
                     {
-                        comments.length
+                        comments && comments.length
                             ?
-                            comments.map((item, index) => (
-                                <CommentUser key={index} {...item} />
+                            comments.map(item => (
+                                <CommentUser key={item.id} {...item} />
                             ))
                             :
-                            datas.comments.map((item, index) => (
-                                <CommentUser key={index} {...item} />
+                            datas.comments.map(item => (
+                                <CommentUser key={item.id} {...item} />
                             ))
                     }
 
