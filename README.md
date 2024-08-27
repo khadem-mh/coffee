@@ -1,40 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# <p align="center">Hi 👋 I'm an expert on React Js 👨‍💻 Next JS</p>
 
-## Getting Started
+__*`Note: Any copying of this file and publishing it with a different appearance and putting it as a sample of your work will be prosecuted`*__
 
-First, run the development server:
+>### Languages
+>> ![](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=1500&pause=5000&color=F77F1A&random=false&width=55&height=25&lines=Html5)
+>> 
+>> ![](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=1500&pause=5000&color=5BCAF7&random=false&width=55&height=25&lines=Css3)
+>> 
+>> ![](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=1500&pause=5000&color=FAFF09&random=false&width=100&height=25&lines=JavaScript)
+>>
+>> ![](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=1500&pause=5000&color=ccc&random=false&width=100&height=25&lines=Next+Js)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+>### Packages
+>> ![](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=1500&pause=5000&color=CB58F7FF&random=false&width=150&height=25&lines=Swiper+Js)
+>> 
+>> ![](https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=1500&pause=5000&color=skyblue&random=false&width=150&height=25&lines=React+Icons)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## View of the project
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+check this [URL](https://coffee.vercel.app) for visit this page
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<img src="public/img/header.png" alt="view" width="800px">
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+___
+>### Social Network
+> [<img src="https://github.com/khadem-mh/khadem-mh/blob/khadem/my-img/ImagesMedia/github.png" width="30">](https://github.com/khadem-mh)
+> [<img src="https://github.com/khadem-mh/khadem-mh/blob/khadem/my-img/ImagesMedia/linkedin.png" width="30">](https://www.linkedin.com/in/khadem-mh/)
+> [<img src="https://github.com/khadem-mh/khadem-mh/blob/khadem/my-img/ImagesMedia/telegram.png" width="30">](https://t.me/mhkhadem)
+> [<img src="https://github.com/khadem-mh/khadem-mh/blob/khadem/my-img/ImagesMedia/whatsapp.png" width="30">](https://wa.me/989031335939)
+> [<img src="https://github.com/khadem-mh/khadem-mh/blob/khadem/my-img/ImagesMedia/x.png">](https://x.com/khadem_mh)
+> [<img src="https://github.com/khadem-mh/khadem-mh/blob/khadem/my-img/ImagesMedia/codepen.png">](https://codepen.io/khadem-mh)
+> [<img src="https://github.com/khadem-mh/khadem-mh/blob/khadem/my-img/ImagesMedia/wakatimesvg.png" width="130">](https://wakatime.com/@khadem_mh)
