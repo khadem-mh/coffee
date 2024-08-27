@@ -3,6 +3,7 @@
     align-items: center;
     border-bottom: 1px solid white;
     padding-bottom: .3rem;
+    width: min-content;
 }
 
 .global-search__input {
