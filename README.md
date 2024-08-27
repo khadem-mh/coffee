@@ -18,7 +18,7 @@ __*`Note: Any copying of this file and publishing it with a different appearance
 
 ## View of the project
 
-check this [URL](https://coffee.vercel.app) for visit this page
+check this [URL](https://coffeeappweb.vercel.app/) for visit this page
 
 <img src="public/img/header.png" alt="view" width="800px">
 

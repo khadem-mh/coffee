@@ -11,7 +11,7 @@ export default function ProductInfo({ product, commentsID }) {
     return (
         <>
             <div className="row align-items-center justify-content-center testy_" style={{ backgroundColor: 'rgb(24, 26,27)', color: 'whitesmoke', padding: '15rem 1rem 6rem 1rem' }}>
-                <div className="d-flex align-items-center" style={{ width: '800px' }}>
+                <div className="d-flex align-items-center justify-content-center text-center flex-wrap flex-auto" style={{ width: '100%'}}>
                     <div className="mr-3">
                         <img className="mb-3 mb-sm-0 rounded" src={img} alt="card" width={350} />
                     </div>
